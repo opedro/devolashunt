@@ -1,5 +1,6 @@
 devolas = document.getElementById('devolas');
 devolasmove = document.getElementById('devolasmove');
+party = document.getElementById('party');
 target = document.getElementById('target');
 button = document.querySelector('button');
 phineas = document.getElementById('phineas');
@@ -55,12 +56,14 @@ window.addEventListener('click', function(e){
         plusOneScore();
         devolas.style.display= 'none';
         devolasmove.style.display = 'block';
+        party.style.display= 'block';
         this.setTimeout(function(){
             let newpositionY = Math.random()*window.innerHeight;
             let newpositionX = Math.random()*window.innerWidth;
             devolas.style.top = newpositionY;
             devolas.style.left = newpositionX;
             devolasmove.style.display = 'none';
+            party.style.display = 'none';
             devolasmove.style.top = newpositionY;
             devolasmove.style.left = newpositionX;
             devolas.style.display = 'block'

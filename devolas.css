@@ -37,6 +37,7 @@ button{
     transform: translateX(-50%);
     height: 150px;
 }
+
 #flecha{
     position: absolute;
     top: 100%;
@@ -44,6 +45,7 @@ button{
     height: 50px;
     transition: all 500ms;
 }
+
 #phineas{
     position: absolute;
     top: 70%;
@@ -51,6 +53,15 @@ button{
     transform: translateX(-50%);
     height: 350px;
     display: block;
+}
+
+#party{
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    height: 350px;
+   
 }
 
 #devolasmove{

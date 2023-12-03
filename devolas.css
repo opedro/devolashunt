@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#target{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+selector{
+    cursor: none;
+}
+
+body{
+    background-image: url('./media/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+button{
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#devolas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+}
+#flecha{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 50px;
+    transition: all 500ms;
+}
+#phineas{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translateX(-50%);
+    height: 350px;
+    display: block;
+}
+
+#devolasmove{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+}
+#score{
+    background-color: white;
+    height: 50px;
+    font-size: 45px;
+    position: absolute;
+    display: block;
+}

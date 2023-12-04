@@ -65,6 +65,7 @@ button{
     top: 70%;
     left: 0%;
     height: 350px;
+    z-index: 15;
    
 }
 

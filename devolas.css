@@ -44,6 +44,7 @@ button{
     left: 0%;
     height: 50px;
     transition: all 500ms;
+    display: none;
 }
 
 #phineas{

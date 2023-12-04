@@ -6,7 +6,17 @@ button = document.querySelector('button');
 phineas = document.getElementById('phineas');
 scorePoints = 0;
 
-gamestarted= true;
+gamestarted= false;
+
+button.addEventListener('click', function(e){
+    document.getElementById('aud_dev_apresentacao').addEventListener('ended', function(e){
+        document.getElementById('aud_dev_sobrenome').play()
+    })
+    document.getElementById('aud_dev_apresentacao').play();
+    gamestarted = true;
+    button.style.display = "none";
+    flecha.style.display = 'block';
+})
 
 plusOneScore = function(){
     scorePoints+=1;
@@ -14,6 +24,8 @@ plusOneScore = function(){
 }
 
 shootArrow = function(x,y){
+    if (!gamestarted)
+    return;
     let flecha = document.getElementById('flecha');
     flecha.style.display = 'block';
     setTimeout(function(){
@@ -40,19 +52,15 @@ window.addEventListener('mousemove', function(e){
     }
 });
 
-/*button.addEventListener('click', function(e){
-    gamestarted = true;
-    button.style.display = 'none';
-    phineas.style.display = 'block'
-    document.getElementById('score').innerText = scorePoints;
-    document.getElementById('score').style.display = 'block';
 
-})*/
 
 window.addEventListener('click', function(e){
+    if (!gamestarted)
+        return;
     shootArrow(e.pageX, e.pageY);
     if (e.pageX > devolas.offsetLeft-50 && e.pageX < devolas.offsetLeft+50 &&
         e.pageY > devolas.offsetTop && e.pageY < devolas.offsetTop+50){
+        this.document.getElementById('aud_dev_ai').play();
         plusOneScore();
         devolas.style.display= 'none';
         devolasmove.style.display = 'block';
@@ -67,6 +75,7 @@ window.addEventListener('click', function(e){
             devolasmove.style.top = newpositionY;
             devolasmove.style.left = newpositionX;
             devolas.style.display = 'block'
+            document.getElementById('aud_dev_oi').play();
         }, 1000)
     }
     console.log ('Dev X = '+ this.document.getElementById('devolas').offsetLeft, 'Dev Y = '+ document.getElementById('devolas').offsetTop)
